@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de Recuerdos</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<div id="pantalla-inicio">
+    <h1 id="titulo-escritura"></h1>
+    <button id="btn-comenzar">Explorar la caja</button>
+</div>
+    <canvas id="lienzo3d"></canvas>
+
+    <div id="modal-lectura" class="oculto">
+        <div class="contenido-modal">
+            <button id="btn-cerrar">Cerrar</button>
+            <img id="imagen-objeto" src="" alt="Objeto">
+            <h2 id="titulo-carta"></h2>
+            <p id="texto-carta"></p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

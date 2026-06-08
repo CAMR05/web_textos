@@ -1,0 +1,76 @@
+/* Reseteo básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita el scroll tradicional */
+    background-color: #1a1a1a;
+}
+
+/* El lienzo 3D de fondo */
+#lienzo3d {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* El modal 2D para la lectura */
+#modal-lectura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 8px;
+    z-index: 10; /* Por encima del canvas */
+    transition: opacity 0.5s ease;
+}
+
+/* Clase para ocultar el modal */
+.oculto {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#pantalla-inicio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%);
+    z-index: 20;
+    font-family: 'Dancing Script', cursive;
+}
+
+#titulo-escritura {
+    color: #f3f0df;
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    min-height: 1.2em; /* Evita saltos mientras se escribe */
+}
+
+#btn-comenzar {
+    padding: 1rem 2.5rem;
+    font-size: 1.5rem;
+    background: #8b5a2b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+#btn-comenzar:hover { background: #a67c52; }
